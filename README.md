@@ -1,6 +1,6 @@
 <a href="">
   <img alt="ChatPDF – Chat with your PDFs powered by AI." src="">
-  <h1 align="center">chatPDF</h1>
+  <h1 align="center">ChatPDF</h1>
 </a>
 
 <p align="center">
