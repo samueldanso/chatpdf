@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import {
   BrainCog,
-  Eye,
   EyeIcon,
   GlobeIcon,
   MonitorSmartphoneIcon,
@@ -11,6 +10,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
+// Define the features of the app with their respective icons and descriptions
 const features = [
   {
     name: "Store your PDFs Documents",
@@ -21,19 +21,19 @@ const features = [
   {
     name: "Blazing Fast Response",
     description:
-      "Experience litening fast answers to your queries, with instant access to your documents.",
+      "Experience lightning fast answers to your queries, with instant access to your documents.",
     icon: ZapIcon,
   },
   {
     name: "Chat Memorization",
     description:
-      "Our intelligent chatbot memorize your previous conversations, providing you with a seamless and personalized experience.",
+      "Our intelligent chatbot memorizes your previous conversations, providing you with a seamless and personalized experience.",
     icon: BrainCog,
   },
   {
     name: "Interactive PDF Viewer",
     description:
-      "Engage with ypur PDFs like never before using our interactive PDF viewer.",
+      "Engage with your PDFs like never before using our interactive PDF viewer.",
     icon: EyeIcon,
   },
   {
@@ -45,7 +45,7 @@ const features = [
   {
     name: "Responsive Across Devices",
     description:
-      "Access and chat with your PDFs documents from anywhere, anytime, on any device.",
+      "Access and chat with your PDF documents from anywhere, anytime, on any device.",
     icon: MonitorSmartphoneIcon,
   },
 ];
@@ -96,6 +96,22 @@ export default function Home() {
               <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent" />
             </div>
           </div>
+        </div>
+
+        <div className="">
+          <dl className="grid-col-1 lg mx-auto grid max-w-2xl gap-x-6 gap-y-10 px-6 text-base leading-7 text-zinc-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+            {features.map((feature) => (
+              <div key={feature.name} className="relative pl-9">
+                <dt className="inline font-semibold text-zinc-900">
+                  <feature.icon
+                    aria-hidden="true"
+                    className="absolute left-1 top-1 h-5 w-5 text-indigo-600"
+                  />
+                </dt>
+                <dd>{feature.description}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </div>
     </main>
