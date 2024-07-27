@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import {
   BrainCog,
   Eye,
@@ -7,6 +8,7 @@ import {
   ServerIcon,
   ZapIcon,
 } from "lucide-react";
+import Link from "next/link";
 
 const features = [
   {
@@ -61,7 +63,7 @@ export default function Home() {
               Transform your PDFs into Interactive Conversations.
             </p>
 
-            <p>
+            <p className="mt-6 text-lg leading-8 text-zinc-600">
               Introducing{" "}
               <span className="font-bold text-indigo-600">ChatPDF</span>
               <br />
@@ -70,10 +72,14 @@ export default function Home() {
               summarize the content, and answer all your questions. Ideal for
               everyone, <span className="text-indigo-600">ChatPDF</span> turns
               static documents into{" "}
-              <span className="font-bold">dynamic conversations</span>enhancing
-              productivity 10x.
+              <span className="font-bold">dynamic conversations, </span>
+              enhancing productivity 10x.
             </p>
           </div>
+
+          <Button asChild className="mt-10">
+            <Link href="/dashboard">Get Started</Link>
+          </Button>
         </div>
       </div>
     </main>
